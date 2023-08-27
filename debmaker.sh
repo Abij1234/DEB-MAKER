@@ -183,17 +183,6 @@ Depends: ${depends}
 Description: ${DESCRIPT}
 coder
 
-printf "${S6}Giving permission to DEBIAN file..... ${R0}\n"
-sleep 1
-cd ..
-chmod 0755 DEBIAN
-cd ..
-
-dpkg-deb -b ${name}
-
-if [ $? -eq 0 ]; then
-    printf "${S2}DEB package created successfully ${R0}\n"
-else
-    printf "${S1}Something went wrong... ${R0}\n"
-fi
+echo
+printf "${S2}Ok created Deb folder of your given project successfully ${R0}\n"
 
